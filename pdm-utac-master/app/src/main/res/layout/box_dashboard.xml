@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boxBackgroundColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btTabList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/boxButtonInactiveBackgroundColor"
+            android:textSize="@dimen/text_subtitle"
+            android:textColor="#ffffff"
+            android:text="Bate-Papo"/>
+
+        <Button
+            android:id="@+id/btTabMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/boxButtonActiveBackgroundColor"
+            android:textSize="@dimen/text_subtitle"
+            android:textColor="#ffffff"
+            android:text="Missões"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boxFrameActiveBackgroundColor">
+
+        <!-- Tab: Bate-Papo -->
+        <LinearLayout
+            android:id="@+id/tabList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YOUR NAME HERE"/>
+            <!-- Conteúdo da aba Bate-Papo aqui -->
+            <ListView
+                android:id="@+id/lvMsg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+        </LinearLayout>
+
+        <!-- Tab: Missão -->
+        <LinearLayout
+            android:id="@+id/tabMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/newMissionButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorTransparent"
+                    android:drawableTop="@mipmap/ic_work"
+                    android:textColor="#ffffff"
+                    android:text="Nova Missão"/>
+
+                <Button
+                    android:id="@+id/oldMissionButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorTransparent"
+                    android:drawableTop="@mipmap/ic_work_check"
+                    android:textColor="#ffffff"
+                    android:text="Missões Anteriores"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/configurationButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorTransparent"
+                    android:drawableTop="@mipmap/ic_settings"
+                    android:textColor="#ffffff"
+                    android:text="Configurações"
+                    />
+
+                <Button
+                    android:id="@+id/galleryButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorTransparent"
+                    android:drawableTop="@mipmap/ic_view_quilt"
+                    android:textColor="#ffffff"
+                    android:text="Galeria de Fotos"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
